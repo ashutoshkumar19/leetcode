@@ -37,8 +37,8 @@ function mergeSort(arr, p, r) {
 
 let x, y;
 
-// const arr = generateIntegerArray(12, 0, 100);
-const arr = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const arr = generateIntegerArray(12, 0, 100);
+// const arr = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 console.log('Original array: ', arr);
 
