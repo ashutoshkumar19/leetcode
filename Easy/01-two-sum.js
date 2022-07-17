@@ -1,3 +1,6 @@
+import { performance } from 'perf_hooks';
+import { generateIntegerArray } from '../util.js';
+
 function twoSum(arr, target) {
   const len = arr.length;
   const obj = {};
@@ -8,6 +11,7 @@ function twoSum(arr, target) {
     }
     obj[target - elem] = i;
   }
+  return [];
 }
 
 function twoSumInefficient(arr, target) {
@@ -23,10 +27,9 @@ function twoSumInefficient(arr, target) {
   return sum_array;
 }
 
-const performance = require('perf_hooks').performance;
 const x = performance.now();
-const arr = new Array(10000).fill().map(() => Math.floor(Math.random() * 10000000) + 1);
-console.log(twoSum(arr, 1028940));
+const arr = generateIntegerArray(100, 100, 200);
+console.log(twoSum(arr, 250));
 // console.log(twoSumInefficient(arr, 1028940));
 const y = performance.now();
 console.log(`Time taken: ${Math.floor(y - x)} ms`);
