@@ -3,7 +3,11 @@ import { performance } from 'perf_hooks';
 function flatten(obj, key_str, val, new_obj, is_recursive = false) {
   for (const key in obj) {
     const child = obj[key];
-    if (child && typeof child !== 'object') {
+    // if (child && typeof child !== 'object') {
+    if (
+      child !== undefined &&
+      (typeof child !== 'object' || child === null || Array.isArray(child))
+    ) {
       val = child;
       new_obj[appendKey(key_str, key)] = val;
     } else if (Object.keys(child).length) {
@@ -28,11 +32,15 @@ let obj = {
     b: {
       c: 'C',
       d: 'D',
+      array: [1, 2, 3, 4, 5],
+      none: null,
     },
     e: 'E',
+    h: true,
   },
   f: 'F',
   g: 'G',
+  i: 5,
 };
 
 const x = performance.now();
