@@ -4,12 +4,12 @@ import { generateIntegerArray, generateString } from '../util.js';
 var maxProfit = function (prices) {
   const len = prices.length;
   let profit = 0;
-  let temp = prices[0];
+  let cost_price = prices[0];
   for (let i = 1; i < len; i++) {
-    if (prices[i] - temp > profit) {
-      profit = prices[i] - temp;
-    } else if (prices[i] < temp) {
-      temp = prices[i];
+    if (prices[i] - cost_price > profit) {
+      profit = prices[i] - cost_price;
+    } else if (prices[i] < cost_price) {
+      cost_price = prices[i];
     }
   }
   return profit;

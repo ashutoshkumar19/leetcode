@@ -21,6 +21,8 @@ function swap(arr, i, j) {
 }
 
 function quickSort(arr, p, r) {
+  p = p === undefined ? 0 : p;
+  r = r === undefined ? arr.length - 1 : r;
   if (p < r) {
     const pivot = partition(arr, p, r);
     quickSort(arr, p, pivot - 1);
@@ -30,15 +32,11 @@ function quickSort(arr, p, r) {
 
 let x, y;
 
-const arr = generateIntegerArray(12, 0, 100);
-// const arr = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
-
-console.log('Original array: ', arr);
+// const arr = [2, 0, 2, 1, 1, 0];
+const arr = generateIntegerArray(100000, 0, 2);
 
 x = performance.now();
-
-quickSort(arr, 0, arr.length - 1);
-console.log('\nSorted array: ', arr);
-
+quickSort(arr);
 y = performance.now();
+// console.log(arr);
 console.log(`Time taken: ${Math.floor(y - x)} ms`);
