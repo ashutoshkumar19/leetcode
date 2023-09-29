@@ -3,21 +3,17 @@ import { performance } from 'perf_hooks';
 const generate = function (numRows) {
   const arr = [];
   for (let i = 0; i < numRows; i++) {
-    if (i === 0) {
-      arr[i] = [1];
-      continue;
+    arr[i] = [];
+    for (let j = 0; j <= i; j++) {
+      arr[i].push(getValue(arr, i, j));
     }
-    arr[i] = [1];
-    for (let j = 1; j < i; j++) {
-      arr[i].push(getNum(arr[i - 1][j - 1]) + getNum(arr[i - 1][j]));
-    }
-    arr[i].push(1);
   }
   return arr;
 };
 
-const getNum = (num) => {
-  return num !== null && num !== undefined ? num : 0;
+const getValue = (arr, i, j) => {
+  let prev_row = arr[i - 1] || [1];
+  return Number(prev_row[j - 1] || 0) + Number(prev_row[j] || 0);
 };
 
 const x = performance.now();
