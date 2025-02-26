@@ -1,1 +1,53 @@
 .DS_Store
+/target/
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+.mvn/
+!**/src/main/**
+!**/src/test/**
+
+node_modules/
+package-lock.json
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.flattened-pom.xml
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.env
+.idea/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+*/node_modules/
+
+### VS Code ###
+.vscode/
+
+.DS_STORE
+*.DS_STORE
+/data
+/tmp
+/temp
