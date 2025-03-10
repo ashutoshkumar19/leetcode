@@ -1,4 +1,4 @@
-package org.ashutosh.java.leetcode.medium;
+package org.ashutosh.java.medium;
 
 import java.util.Arrays;
 

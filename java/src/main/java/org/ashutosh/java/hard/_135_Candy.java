@@ -1,4 +1,4 @@
-package org.ashutosh.java.leetcode.hard;
+package org.ashutosh.java.hard;
 
 import org.ashutosh.java.utils.RandomGenerator;
 

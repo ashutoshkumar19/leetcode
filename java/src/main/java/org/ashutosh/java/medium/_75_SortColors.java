@@ -1,4 +1,4 @@
-package org.ashutosh.java.leetcode.medium;
+package org.ashutosh.java.medium;
 
 import org.ashutosh.java.utils.RandomGenerator;
 import org.ashutosh.java.utils.TimeUtils;

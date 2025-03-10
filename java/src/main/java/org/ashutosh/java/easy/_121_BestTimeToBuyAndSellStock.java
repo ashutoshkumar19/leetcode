@@ -1,4 +1,4 @@
-package org.ashutosh.java.leetcode.easy;
+package org.ashutosh.java.easy;
 
 public class _121_BestTimeToBuyAndSellStock {
 	public static void main(String[] args) {
